@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import "./style.scss";
-import Moment from "react-moment";
 import "moment-timezone";
 import {
   ReplyIcon,
@@ -12,6 +11,9 @@ import {
 import moment from "moment-timezone";
 
 export default function App() {
+
+  /* eslint-disable */
+
   const [name, setName] = useState();
   const [username, setUsername] = useState();
   const [isVerified, setIsVerified] = useState(true);
