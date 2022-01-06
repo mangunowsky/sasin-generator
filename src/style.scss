@@ -1,0 +1,143 @@
+* {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  border: 0;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica", sans-serif, Arial !important;
+}
+
+html,
+body {
+  background: #000;
+  height: 100%;
+}
+
+#root {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  
+}
+
+.tweet-settings {
+  flex: 1;
+  color: #fff;
+  border-right: 1px solid #2f3336;
+  height: 100%;
+  padding: 25px;
+  h3 {
+    font-size: 24px;
+    font-weight: normal;
+    border-bottom: 1px solid #2f3336;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+  }
+  ul {
+    li:not(:last-child){
+      margin-bottom: 20px;
+    }
+  }
+  .input {
+    width: 100%;
+    background: transparent;
+    border-bottom: 1px solid #2f3336;
+    color: #fff;
+    padding: 10px 0 15px;
+    &::placeholder{
+      color: #fff;
+      font-size: 15px;
+      padding: 10px 0;
+    }
+    &:focus{
+      border-color: #474d52;
+    }
+  }
+}
+
+.tweet-container {
+  padding: 0 50px;
+}
+
+.tweet {
+  border: 1px solid #2f3336;
+  width: 600px;
+  margin: 2px auto;
+  padding: 0 16px;
+  &-author {
+    height: 48px;
+    margin-top: 12px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 4px;
+    font-size: 15px;
+    img {
+      width: 48px;
+      height: 48px;
+      margin-right: 12px;
+      border-radius: 50%;
+    }
+    .name {
+      color: #fff;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      svg {
+        vertical-align: text-bottom;
+        margin-left: 2px;
+      }
+    }
+    .username {
+      color: #6e767d;
+    }
+  }
+  &-content {
+    padding: 12px 0;
+    p {
+      font-size: 23px;
+      line-height: 28px;
+      color: #fff;
+    }
+    img{
+      height: 27.59px;
+      vertical-align: text-bottom;
+      margin-left: 4px;
+    }
+    .hash:before {
+      content: "\00a0";
+    }
+    .hash{
+      color: rgb(29, 155, 240);
+    }
+  }
+  .tweet-date {
+    color: #6e767d;
+    font-weight: 400;
+    font-family: TwitterChirp, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 15px;
+    margin-right: 12px;
+    padding-bottom: 15px;
+  }
+  &-stats {
+    height: 53px;
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    color: #6e767d;
+    border-top: 1px solid #2f3336;
+    b {
+      color: #fff;
+    }
+    span:not(:last-child) {
+      margin-right: 20px;
+    }
+  }
+  &-actions {
+    height: 48px;
+    display: flex;
+    border-top: 1px solid #2f3336;
+    color: #fff;
+    align-items: center;
+    justify-content: space-around;
+  }
+}
