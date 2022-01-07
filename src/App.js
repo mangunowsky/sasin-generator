@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import Button from 'react-bootstrap/Button';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import "./style.scss";
 import "moment-timezone";
 import {
@@ -28,48 +30,6 @@ export default function App() {
 
   return (
     <>
-      <div className="tweet-settings">
-        <h3>Dostosuj Tweeta</h3>
-        <ul>
-          {/* <li>
-            <input 
-            type="text" 
-            className="input" 
-            placeholder='Jacek Sasin' 
-            value={name}
-            onChange={e => setName(e.target.value)}
-            ></input>
-          </li>
-          <li>
-            <input 
-            type="text" 
-            className="input" 
-            placeholder='SasinJacek'
-            value={username}
-            onChange={e => setUsername(e.target.value)}
-            ></input>
-          </li> */}
-          <li>
-            <textarea 
-            type="text"
-            maxLength='290'
-            className="textarea" 
-            placeholder='Gdzie tym razem wybiera się Jacek?'
-            value={tweet}
-            onChange={e => setTweet(e.target.value)}
-            ></textarea>
-          </li>
-          <li>
-            <input 
-            type="text" 
-            className="input" 
-            placeholder='Wpisz hashtag, np: #Turów'
-            value={hash}
-            onChange={e => setHash(e.target.value)}
-            ></input>
-          </li>
-        </ul>
-      </div>
       <div className="tweet-container">     
         <div className="tweet">
           <div className="tweet-author">
@@ -127,6 +87,48 @@ export default function App() {
             </span>
           </div>
         </div>
+      </div>
+      <div className="tweet-settings">
+        <h3>Dostosuj Tweeta</h3>
+        <ul>
+          {/* <li>
+            <input 
+            type="text" 
+            className="input" 
+            placeholder='Jacek Sasin' 
+            value={name}
+            onChange={e => setName(e.target.value)}
+            ></input>
+          </li>
+          <li>
+            <input 
+            type="text" 
+            className="input" 
+            placeholder='SasinJacek'
+            value={username}
+            onChange={e => setUsername(e.target.value)}
+            ></input>
+          </li> */}
+          <li>
+            <textarea 
+            type="text"
+            maxLength='290'
+            className="textarea" 
+            placeholder='Gdzie tym razem wybiera się Jacek?'
+            value={tweet}
+            onChange={e => setTweet(e.target.value)}
+            ></textarea>
+          </li>
+          <li>
+            <input 
+            type="text" 
+            className="input" 
+            placeholder='Wpisz hashtag, np: #Turów'
+            value={hash}
+            onChange={e => setHash(e.target.value)}
+            ></input>
+          </li>
+        </ul>
       </div>
     </>
   );

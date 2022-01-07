@@ -1,3 +1,5 @@
+@import "~bootstrap/scss/bootstrap";
+
 * {
   padding: 0;
   margin: 0;
@@ -11,23 +13,24 @@ html,
 body {
   background: #000;
   height: 100%;
-  width: 75%;
+  width: 100%;
 }
 
 #root {
   height: 100%;
-  // width: 75%;
-  display: flex;
+  width: 100%;
   align-items: center;
+  min-width: 690px;
 }
 
 .tweet-settings {
-  flex: 1;
   color: #fff;
-  border-right: 1px solid #2f3336;
-  height: 100%;
-  width: 33%;
-  padding: 25px;
+  position: relative;
+  margin-top: 10%;
+  margin-bottom: -100px;
+  margin-left: 5%;
+  margin-right: 5%;
+  align-content: center;
   h3 {
     font-size: 24px;
     font-weight: normal;
@@ -79,21 +82,23 @@ body {
 
 .tweet-container {
   position: relative;
-  // top: 50%;
-  left: 45%;
-  width:30em;
-  height:18em;
-  margin-top: -9em; /*set to a negative number 1/2 of your height*/
-  margin-left: -15em; /*set to a negative number 1/2 of your width*/
+  margin-bottom: 10%;
+  margin-top: 10%;
+  margin-left: 5%;
+  margin-right: 5%;
+  align-content: center;
+  text-align: center;
 }
 
 .tweet {
+  text-align: left;
+	display: inline-block;
   border: 1px solid #2f3336;
   width: 600px;
   margin: 2px;
   padding: 0 16px;
   &-author {
-    height: 48px;
+    height: 10%;
     margin-top: 12px;
     display: flex;
     align-items: center;
