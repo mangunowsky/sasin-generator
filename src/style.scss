@@ -11,13 +11,14 @@ html,
 body {
   background: #000;
   height: 100%;
+  width: 75%;
 }
 
 #root {
   height: 100%;
+  // width: 75%;
   display: flex;
   align-items: center;
-  
 }
 
 .tweet-settings {
@@ -25,6 +26,7 @@ body {
   color: #fff;
   border-right: 1px solid #2f3336;
   height: 100%;
+  width: 33%;
   padding: 25px;
   h3 {
     font-size: 24px;
@@ -45,7 +47,27 @@ body {
     color: #fff;
     padding: 10px 0 15px;
     &::placeholder{
-      color: #fff;
+      color: rgb(97, 95, 95);
+      font-size: 15px;
+      padding: 10px 0;
+    }
+    &:focus{
+      border-color: #474d52;
+    }
+  }
+  .textarea {
+    width: 100%;
+    min-height: 130px;
+    max-height: 130px;
+    min-width: 100%;
+    max-width: 100%;
+    background: transparent;
+    border-bottom: 1px solid #2f3336;
+    color: #fff;
+    padding: 10px 0 15px;
+    overflow-wrap: break-word;
+    &::placeholder{
+      color: rgb(97, 95, 95);
       font-size: 15px;
       padding: 10px 0;
     }
@@ -56,13 +78,19 @@ body {
 }
 
 .tweet-container {
-  padding: 0 50px;
+  position: relative;
+  // top: 50%;
+  left: 45%;
+  width:30em;
+  height:18em;
+  margin-top: -9em; /*set to a negative number 1/2 of your height*/
+  margin-left: -15em; /*set to a negative number 1/2 of your width*/
 }
 
 .tweet {
   border: 1px solid #2f3336;
   width: 600px;
-  margin: 2px auto;
+  margin: 2px;
   padding: 0 16px;
   &-author {
     height: 48px;
