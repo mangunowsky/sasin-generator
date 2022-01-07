@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { createRef, useState } from "react";
 import "./style.scss";
 import "moment-timezone";
 import {
@@ -20,19 +20,18 @@ export default function App() {
   const [tweet, setTweet] = useState();
   const [hash, setHash] = useState();
   const [avatar, setAvater] = useState();
-  const [retweets, setRetweets] = useState(0);
-  const [quoteTweets, setQuoteTweets] = useState(0);
-  const [likes, setLikes] = useState(0);
+  const [retweets, setRetweets] = useState(192);
+  const [quoteTweets, setQuoteTweets] = useState(514);
+  const [likes, setLikes] = useState(1026);
   const [time, setTime] = useState(moment().format("HH:mm"));
   const [date, setDate] = useState(moment().format("DD MMM, YYYY"));
-
 
   return (
     <>
       <div className="tweet-settings">
         <h3>Dostosuj Tweeta</h3>
         <ul>
-          <li>
+          {/* <li>
             <input 
             type="text" 
             className="input" 
@@ -49,28 +48,29 @@ export default function App() {
             value={username}
             onChange={e => setUsername(e.target.value)}
             ></input>
-          </li>
+          </li> */}
           <li>
-            <input 
-            type="text" 
-            className="input" 
-            placeholder='Wpisz drogę Jaculi'
+            <textarea 
+            type="text"
+            maxLength='290'
+            className="textarea" 
+            placeholder='Gdzie tym razem wybiera się Jacek?'
             value={tweet}
             onChange={e => setTweet(e.target.value)}
-            ></input>
+            ></textarea>
           </li>
           <li>
             <input 
             type="text" 
             className="input" 
-            placeholder='#Turów'
+            placeholder='Wpisz hashtag, np: #Turów'
             value={hash}
             onChange={e => setHash(e.target.value)}
             ></input>
           </li>
         </ul>
       </div>
-      <div className="tweet-container">
+      <div className="tweet-container">     
         <div className="tweet">
           <div className="tweet-author">
             <img src="https://pbs.twimg.com/profile_images/1170441324635525122/_2PZVWm__400x400.jpg" />
@@ -96,7 +96,7 @@ export default function App() {
           </div>
           <div className="tweet-date">
             {time} · {date} · Twitter for Android
-          </div>
+          </div> 
           <div className="tweet-stats">
             <span>
               <b>{retweets}</b> Retweets
